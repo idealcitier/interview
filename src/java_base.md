@@ -53,6 +53,49 @@ public class AutoUnboxingTest {
     }  
 }  
 ```
+### 装箱拆箱的过程
+**装箱**就是自动把基本类型转换为包装器类型；
+**拆箱**就是自动将包装器类型转换为基本数据类型。
+```java
+public class Main {
+    public static void main(String[] args) {
+         
+        Integer i = 10;
+        int n = i;
+    }
+}
+```
+使用javap对class文件进行反编译，得到如下的信息：
+```
+➜  code git:(master) ✗ javap -c Main
+Compiled from "Main.java"
+public class Main {
+  public Main();
+    Code:
+       0: aload_0
+       1: invokespecial #1                  // Method java/lang/Object."<init>":()V
+       4: return
+
+  public static void main(java.lang.String[]);
+    Code:
+       0: bipush        10
+       2: invokestatic  #2                  // Method java/lang/Integer.valueOf:(I)Ljava/lang/Integer;
+       5: astore_1
+       6: aload_1
+       7: invokevirtual #3                  // Method java/lang/Integer.intValue:()I
+      10: istore_2
+      11: return
+}
+```
+从编译得到的字节码的内容可以看到，在装箱的时候调用了`Integer.valueOf(int)`，拆箱的时候调用了`Integer.intValue()`方法。
+其他类似的例如的Double，Float等等都是这样的方法。
+
+总结来说:
+> 装箱的过程都是调用包装器的valueOf()方法，拆箱就是调用**Value()方法来实现的，`***`代表数据的基本类型。
+
+
+
+
 
 
 ### 一个.java文件中是否可以包括多个类(不是内部类)？有什么限制？
