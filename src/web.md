@@ -26,4 +26,16 @@
 ## 127.0.0.1
 
 
-## JSP
+
+## servlet
+- 就是java类
+- 服务器端的小程序
+- 处理用户请求
+
+通过HTTP接受和处理问题的请求
+
+### servlet
+- 实现的servlet类
+- 继承GenericServlet类
+
+## jsp
