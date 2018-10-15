@@ -415,3 +415,10 @@ public static void main(String args[]) {
 
 序列化就是一种用来处理对象流的机制
 
+## java中List分为ArrayListh和LinkedList，陈述一下这两个的区别以及各自的优缺点
+
+## 线程创建的方式有几种
+
+## sleep和wait的区别
+
+## StringBuffer StringBuilder的区别？
