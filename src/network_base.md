@@ -22,7 +22,7 @@
 - 运输层
 - 应用层
 
-![](./images/IOSAndTCPIP.png)
+![](https://github.com/idealcitier/interview/blob/master/images/IOSAndTCPIP.png)
 
 ### 五层协议
 
@@ -90,7 +90,7 @@ ARP是一种根据IP地址获取物理地址的TCP/IP协议。在OSI的**网络�
 RARP是逆地址解析协议，作用是完成硬件地址到IP地址的映射，主要用于无盘工作站，因为给无盘工作站配置的IP地址不能保存。工作流程：在网络中配置一台RARP服务器，里面保存着IP地址和MAC地址的映射关系，当无盘工作站启动后，就封装一个RARP数据包，里面有其MAC地址，然后广播到网络上去，当服务器收到请求包后，就查找对应的MAC地址的IP地址装入响应报文中发回给请求者。因为需要广播请求报文，因此RARP只能用于具有广播能力的网络。
 
 ### TCP/UDP
-![](./images/三次握手and四次挥手.jpg)
+![](https://github.com/idealcitier/interview/blob/master/images/%E4%B8%89%E6%AC%A1%E6%8F%A1%E6%89%8Band%E5%9B%9B%E6%AC%A1%E6%8C%A5%E6%89%8B.jpg)
 
 #### TCP三次握手
 - 第一次握手：客户端发送syn包(syn=x)到服务器，并进入SYN_SEND状态，等待服务器确认；
